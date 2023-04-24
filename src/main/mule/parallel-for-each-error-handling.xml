@@ -24,7 +24,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 		<parallel-foreach doc:name="Parallel For Each"
 			doc:id="53e78655-709a-4b3e-aa4d-6f06ae12ca97" collection="#[payload]">
 			<try doc:name="Try" doc:id="4a0b1dab-ad64-4c8c-98a6-7949486b196b" >
-				<validation:is-not-blank-string doc:name="payload" doc:id="c2b6fc59-14e7-4d9c-b48f-c239933cff9b" />
+				<validation:is-not-blank-string doc:name="Check if string is blank" doc:id="c2b6fc59-14e7-4d9c-b48f-c239933cff9b" />
 				<logger level="INFO" doc:name="Payload" doc:id="93bb54c1-0274-4eec-9f40-430da8691485" message='#[output application/json&#10;---&#10;{&#10;	status: "Success",&#10;	responsePayload: payload&#10;}]' />
 				<error-handler >
 					<on-error-continue enableNotifications="true" logException="true" doc:name="On Error Continue" doc:id="7c6c7f3b-7154-4534-9bb2-b403a69bd06a" type="ANY">
@@ -40,7 +40,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 				</error-handler>
 			</try>
 		</parallel-foreach>
-		<ee:transform doc:name="Parallel For Each Response" doc:id="4778950f-1a09-44fb-a0ef-f161bfa2f35a" >
+				<ee:transform doc:name="Parallel For Each Response" doc:id="4778950f-1a09-44fb-a0ef-f161bfa2f35a" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
 output application/json
