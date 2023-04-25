@@ -15,7 +15,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	</http:request-config>
 	<flow name="parallel-for-each-error-handlingFlow"
 		doc:id="c61cdb80-67e2-47af-b0d4-2ad49edeecf9">
-		<http:listener doc:name="GET 8082/par-for-each-test"
+		<http:listener doc:name="GET 8081/par-for-each-test"
 			doc:id="390c56e6-135d-4fdc-850b-dd08d0688d7c"
 			config-ref="HTTP_Listener_config" path="/par-for-each-test" />
 		<set-payload
@@ -45,7 +45,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 				<ee:set-payload ><![CDATA[%dw 2.0
 output application/json
 ---
-payload]]></ee:set-payload>
+payload.*payload]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
 		<logger level="INFO" doc:name="End Logger"

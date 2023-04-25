@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "300d402e-6df6-499c-9280-55b4d7c488e5",
+		"name": "Mule Error Handling Scopes",
+		"description": "Mule Error handling scopes collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Local",
+			"item": [
+				{
+					"name": "Local testing for-each-without-error-handling-flow",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/for-each-test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"for-each-test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Local testing parallel-for-each-without-error-handling-flow Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/par-for-each-test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"par-for-each-test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Local testing for-each-with-error-handling",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/for-each-error-test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"for-each-error-test"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Runtime",
+			"item": [
+				{
+					"name": "Sandbox for-each test without error handling",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://mule-error-handling-scopes.us-e2.cloudhub.io/for-each-test",
+							"protocol": "http",
+							"host": [
+								"mule-error-handling-scopes",
+								"us-e2",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"for-each-test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sandbox for-each test with error handling",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://mule-error-handling-scopes.us-e2.cloudhub.io/for-each-error-test",
+							"protocol": "http",
+							"host": [
+								"mule-error-handling-scopes",
+								"us-e2",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"for-each-error-test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sandbox parallel for each test with error handling",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://mule-error-handling-scopes.us-e2.cloudhub.io/par-for-each-test",
+							"protocol": "http",
+							"host": [
+								"mule-error-handling-scopes",
+								"us-e2",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"par-for-each-test"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
